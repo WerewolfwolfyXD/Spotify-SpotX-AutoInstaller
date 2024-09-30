@@ -71,9 +71,9 @@ fn patch_spotx() {
 
     println!("成功！正在部署SpotX!");
 
-    let spotx = "./spotx_install.bat";
+    let spotx_installer = "./spotx_install.bat";
 
-    let output = Command::new(spotx)
+    let output = Command::new(spotx_installer)
         .output()
         .expect("无法执行...可能是哪里出问题惹！！是不是没有spotx_install.bat这个文件还是没权限啦！ \\>A</");
 
