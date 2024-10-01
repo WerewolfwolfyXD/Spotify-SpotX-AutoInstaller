@@ -1,0 +1,9 @@
+program-started = 程式已经启动
+msg-detected-available-spotify-skip-download = 检测到Spotify客户端，绕过下载
+msg-non-detected-available-spotify-go-download = 未检测到Spotify客户端，开始自动下载
+msg-spotify-client-downloaded-2-setup = 下载已完成，开始安装
+msg-fetch-spotx-from-github = 正在开始从SpotX@GitHub项目拉取代码部署，请确保网络通畅！
+msg-success--to-setup = 成功！正在部署SpotX!
+err-cannot-deploy-spotx = 安装包无法正常执行，如果出现了这个问题，删掉安装包再执行一遍，或者是自己手动安装吧，是软件内部返回的错误报告引起的，这个消息只是提醒
+msg-enjoy = 不出意外的话~可以用了哦~xwx
+err-setup-spotify-client-output-status-fail = 无法执行...可能是哪里出问题惹！！是不是没有spotx_install.bat这个文件还是没权限啦！ \\>A</

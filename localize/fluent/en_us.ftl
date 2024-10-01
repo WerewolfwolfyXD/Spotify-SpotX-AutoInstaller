@@ -1,0 +1,9 @@
+program-started = The program has been started
+msg-detected-available-spotify-skip-download = An available Spotify client was detected in your computer, Skipping download
+msg-non-detected-available-spotify-go-download = Non available Spotify client in your computer, Downloading
+msg-spotify-client-downloaded-2-setup = Latest Spotify client downloaded, Setup the installation
+msg-fetch-spotx-from-github = Already to deploy-fetch the SpotX from GitHub
+msg-success--to-setup = Fetch success! Setup the SpotX to your Spotify client!
+err-cannot-deploy-spotx = Cannot setup SpotX to your Spotify client! Check the permission and check if your Spotify is outdated.
+msg-enjoy = Enjoy your Spotify X SpotX!
+err-setup-spotify-client-output-status-fail = The installation of Spotify was return an error code, you have to run installation on your own or restart the program and retry again.
