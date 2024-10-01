@@ -28,7 +28,7 @@ dependencies = [
 
 [[package]]
 name = "auto_spotify_spotx"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "fluent",
  "locale_config",
