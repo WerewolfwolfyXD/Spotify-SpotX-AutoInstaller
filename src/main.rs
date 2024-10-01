@@ -5,8 +5,7 @@ use std::path::Path;
 use std::process::Command;
 
 use unic_langid::LanguageIdentifier;
-use fluent::{FluentArgs, FluentValue, FluentBundle, FluentResource, FluentError};
-use locale_config::Locale;
+use fluent::{FluentBundle, FluentResource, FluentError};
 
 
 fn main() {
@@ -44,7 +43,7 @@ fn main() {
              bundle.format_pattern(&bundle.get_message("program-started").unwrap().value().unwrap(), None, &mut errors)
     );
 
-    if detect_standard_spotify_executeable() {
+    if detect_standard_spotify_execution() {
         println!("{}",
                  bundle.format_pattern(&bundle.get_message("msg-detected-available-spotify-skip-download").unwrap().value().unwrap(), None, &mut errors));
         patch_spotx(&mut bundle);
@@ -60,7 +59,7 @@ fn main() {
 
 }
 
-fn detect_standard_spotify_executeable() -> bool {
+fn detect_standard_spotify_execution() -> bool {
 
     let appdata = match env::var("APPDATA") {
         Ok(val) => val,
@@ -72,11 +71,7 @@ fn detect_standard_spotify_executeable() -> bool {
 
     let standard_spotify_executable = format!("{}/Spotify/spotify.exe", appdata);
 
-    if Path::new(&standard_spotify_executable).exists() {
-        return true
-    } else {
-        return false
-    }
+    return Path::new(&standard_spotify_executable).exists()
 }
 
 fn download_spotify_client_setup(url: &str) {
@@ -88,7 +83,7 @@ fn download_spotify_client_setup(url: &str) {
 
 }
 
-fn setup_spotify_client(mut bundle: &FluentBundle<FluentResource>) {
+fn setup_spotify_client(bundle: &FluentBundle<FluentResource>) {
     let mut errors: Vec<FluentError> = vec![];
 
 
