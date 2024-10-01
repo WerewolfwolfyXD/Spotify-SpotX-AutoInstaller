@@ -7,3 +7,4 @@ msg-success--to-setup = Fetch success! Setup the SpotX to your Spotify client!
 err-cannot-deploy-spotx = Cannot setup SpotX to your Spotify client! Check the permission and check if your Spotify is outdated.
 msg-enjoy = Enjoy your Spotify X SpotX!
 err-setup-spotify-client-output-status-fail = The installation of Spotify was return an error code, you have to run installation on your own or restart the program and retry again.
+msg-enter-2-exit = Press Enter to exit

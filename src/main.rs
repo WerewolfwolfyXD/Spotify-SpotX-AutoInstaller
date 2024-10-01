@@ -1,8 +1,8 @@
 use reqwest;
-use std::env;
+use std::{env, io};
 use std::fs::File;
 use std::path::Path;
-use std::process::Command;
+use std::process::{exit, Command};
 
 use unic_langid::LanguageIdentifier;
 use fluent::{FluentBundle, FluentResource, FluentError};
@@ -57,6 +57,7 @@ fn main() {
         patch_spotx(&mut bundle);
     }
 
+    exit_program(&mut bundle);
 }
 
 fn detect_standard_spotify_execution() -> bool {
@@ -125,4 +126,14 @@ fn patch_spotx(bundle: &FluentBundle<FluentResource>) {
         println!("{}",
                  bundle.format_pattern(&bundle.get_message("msg-enjoy").unwrap().value().unwrap(), None, &mut errors));
     }
+}
+
+fn exit_program(bundle: &FluentBundle<FluentResource>) {
+    let mut errors: Vec<FluentError> = vec![];
+
+    let mut input = String::new();
+    println!("{}",
+             bundle.format_pattern(&bundle.get_message("msg-enter-2-exit").unwrap().value().unwrap(), None, &mut errors));
+    io::stdin().read_line(&mut input).expect("Nothing especially thing will happened, to a result, it quit. Isn't it?");
+    exit(0);
 }
